@@ -7,8 +7,17 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 
-import HomeScreen from "../Screens/HomeScreen";
+import { HomeStack } from "./Home";
 import LinearGradient from "react-native-linear-gradient";
+
+
+const Jaggi = () => {
+  return (
+    <View>
+      <Text>Jaggi</Text>
+    </View>
+  )
+}
 
 
 const Tab = createBottomTabNavigator();
@@ -46,7 +55,7 @@ const App = () => {
       >
         <Tab.Screen
           name="HOME_STACK"
-          component={HomeScreen}
+          component={HomeStack}
           options={{
             tabBarIcon: ({ color, focused, size }) => {
               return (
@@ -61,7 +70,7 @@ const App = () => {
         />
         <Tab.Screen
           name="COLLECTION_STACK"
-          component={HomeScreen}
+          component={Jaggi}
           options={{
             tabBarIcon: ({ color, focused, size }) => {
               return (
@@ -76,7 +85,7 @@ const App = () => {
         />
         <Tab.Screen
           name="SEARCH_STACK"
-          component={HomeScreen}
+          component={Jaggi}
           options={{
             tabBarIcon: ({ color, focused, size }) => {
               return (
@@ -91,7 +100,7 @@ const App = () => {
         />
         <Tab.Screen
           name="LIKE_STACK"
-          component={HomeScreen}
+          component={Jaggi}
           options={{
             tabBarIcon: ({ color, focused, size }) => {
               return (
